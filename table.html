@@ -1,67 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    tr:nth-child(even){
-      background: #ffffff;
-    }
-    tr:nth-child(odd){
-      background: #dddddd;
-    }
-    html,body{
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-    table{
-      border-collapse: collapse;
-      font-family: Tahoma;
-      width: 72%;
-    }
-    th{
-      border-bottom: 1px solid black;
-      background: none repeat scroll 0 0 #77d377;
-      padding: 10px;
-      color: #ffffff;
-    }
-    tr{
-      border-top: 1px solid black;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-        <form action="">
-          <table>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-            </tr>
-            <tr id="d">
-              <td>Deepak</td>
-              <td>Paswan</td>
-              <td>deepak23@gmail.com</td>
-            </tr>
-            <tr id="d">
-              <td>Deepak</td>
-              <td>Paswan</td>
-              <td>deepak23@gmail.com</td>
-            </tr>
-            <tr id="d">
-              <td>Deepak</td>
-              <td>Paswan</td>
-              <td>deepak23@gmail.com</td>
-            </tr>
-            <tr id="d">
-              <td>Deepak</td>
-              <td>Paswan</td>
-              <td>deepak23@gmail.com</td>
-            </tr>
-          </table>
-        </form>
-</body>
+<html>
+    <head>
+        <title>DATA TYPE</title>
+        <style>
+            ol{
+                color: crimson;
+                font-size: 30;
+                background-color: darkolivegreen;
+            }
+            ul{
+                color: blue;
+                font-style: italic;
+                font-size: 20px;
+                background-color: rgb(162, 82, 238);
+            }
+            .c{
+                color: rgb(180, 226, 43);
+                font-size: 25;
+            }
+            .c1{
+                color: black;
+                font-weight: bolder;
+                font-size: 35;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1" align="center">
+            <ol class="c1">
+                <li>Primitive</li>
+                <ol type="A">
+                    <li>Numeric</li>
+                    <ol type="i" class="c">
+                        <li>Integral</li>                    
+                    <ul>
+                        <li>byte</li>
+                        <li>short</li>
+                        <li>int</li>
+                        <li>long</li>
+                    </ul>
+                        <li>Real</li>
+                        <ul>
+                            <li>foalt</li>
+                            <li>double</li>
+                        </ul>
+                    </ol>
+                    <li>Non-Numeric</li>
+                    <ul>
+                        <li>charater</li>
+                        <li>boolean</li>
+                   </ul>
+                </ol>
+                <li>Non-Primitive</li>
+                <ul type="square">
+                    <li>Array</li>
+                    <li>interface</li>
+                    <li>public</li>
+                </ul>
+            </ol>        
+        </table>
+    </body>
 </html>

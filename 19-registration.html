@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        table {
+            border: 10px solid red;
+            padding: 4pc;
+            width: 10px;
+            background-color: aquamarine
+        }
+
+        th {
+            color: brown;
+            font-weight: bold;
+            font-family: Arial;
+            font-style: italic;
+            font-size: 30px;
+            border: 1px solid aquamarine;
+            width: 10px;
+            padding: 20px;
+            /* word-break: keep-all;  */
+
+        }
+
+        td {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Tahoma;
+            border: 1px solid aquamarine;
+            width: 10px;
+
+        }
+
+        .c {
+            font-size: 15px;
+            margin: 4pc;
+            color: blueviolet;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table align="center">
+            <tr>
+                <th colspan="2">Registration Here</th>
+            </tr>
+            <tr>
+                <td>Fist Name :</td>
+                <td><input type="text" placeholder="Enter first name"></td>
+            </tr>
+            <tr>
+                <td>Last Nmae:</td>
+                <td><input type="text" placeholder="Enter last name"></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input type="email" placeholder="Enter email" td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" name="mypassword" placeholder="Enter email password"></td>
+            </tr>
+            <tr>
+                <td>DOB :</td>
+                <td><input type="date" placeholder="BOD" /></td>
+            </tr>
+            <tr>
+                <td>Gender :</td>
+                <td class="c">
+                    <input type="radio" name="Gender" />Male
+                    <input type="radio" name="Gender" />Female
+                    <input type="radio" name="Gender" />Other
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification:</td>
+
+                <td class="c">
+                    <input type="checkbox" name="c" />B.Tech
+                    <input type="checkbox" name="c" />M.Tech
+                    <input type="checkbox" name="c" />PHP
+                </td>
+            </tr>
+            <tr>
+                <td>Category :</td>
+                <td>
+                    <select>
+                        <option>Select</option>
+                        <option>Genral</option>
+                        <option>Obc</option>
+                        <option>SC/St</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ImageUpload:</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>About You :</td>
+                <td>
+                    <textarea cols="20" rows="5" placeholder="Enter about you"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Sign In"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>

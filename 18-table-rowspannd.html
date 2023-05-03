@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Colspanned</title>
+        <style>
+          table{
+            background-color:yellowgreen;
+            border-right:10px ;
+            border-radius: 1pc;
+            border-bottom-right-radius: 20px;
+          }
+          td{    
+            background-color: aquamarine;
+            color:red;
+            border-radius: 5pc;
+            border-right-width: 10px;    
+          }
+          th{
+            background-color:lightslategrey;
+            color: maroon;
+            border-width: 20px;
+            border-radius: 5pc;
+          }
+    #th1{
+        border-left: 10px;
+      }
+        </style>
+    </head>
+    <body>
+      <a href="./17-table-colspanned.html">Go to Table Colspanned</a>
+        <table border="1" cellpadding="5" cellspacing="5" align="center" class="c">
+            <tr>
+                <th colspan="2" id="th1">Country</th>
+                <th colspan="2">Capital</th>    
+            </tr>
+            <tr>
+                <th rowspan="2">ASIA</th>
+            </tr>
+              <tr>
+                <td>India</tdj>
+                <td>New delhi</td>
+              </tr>    
+              <tr>
+                <th rowspan="2">Europe</th>
+              </tr>
+              <tr>
+                <td>Bangladesh</td>
+                <td>Dhaka</td>
+              </tr>  
+              <tr>
+                <th rowspan="2">North Amerika</th>
+              </tr>  
+              <tr>
+                <td>England</td>
+                <td>London</td>
+              </tr>    
+        </table>
+    </body>
+</html>
