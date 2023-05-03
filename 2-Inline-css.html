@@ -1,0 +1,50 @@
+<!-- Element Selecter -->
+<!-- id Selecter  -->
+<!-- class Selecter  -->
+<!--  group Selecter  -->
+<!--  univarsal Selecter -->
+<!--  specific Selecter -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>font.CSS</title>
+        <!-- Internal.css -->
+        <style>
+            p{
+                color: red;
+                font-family: Comic Sans MS;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 30px;
+                background-color: cyan;
+                width: 150px;
+                padding: 30PX;
+                border-radius: 2pc;
+            }
+        .loder{
+            width: 45px;
+            height: 45px;
+            background-color: orange;
+            animation: flip 1s linear infinite;
+        }
+        @keyframes flip{
+          50%{
+            transform: rotateX(180deg);
+          }
+          100%{
+            transform: rotateX(180deg) rotateY(180deg);
+          }
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div class="loder">
+        <!-- Inline.css -->
+        <p style="color: green;">Pargraph</p>
+        <p style="background-color: lightcoral;">Pargraph</p>
+        </div>
+        </center>
+        
+    </body>
+</html>
