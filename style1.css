@@ -1,0 +1,15 @@
+.header{
+  height:90vh;
+  width: 100%;
+  background: linear-gradient(to right,rgba(51, 215, 244, 0.2),rgb(254, 55, 48)),url(./images/istockphoto-1406459641-1024x1024.jpg);
+  color: white;
+  background: cover;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.section{
+  background: linear-gradient(to right,rgba(244, 255, 37, 0.2),rgb(251, 241, 168))
+}
+.c{
+  font-family: Tahoma;
+  font-style: italic;
+}

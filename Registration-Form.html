@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ssss<meta http-equiv="refresh" content="5"> -->
+  <!-- Bootstrap CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>Project Intro</title>
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+
+        var fname=$("#firstName").val();
+        var lname=$("#lastName").val();
+        var mnumber=$("#mobile").val();
+        var email=$("#email").val();
+        var password=$("#password").val();
+        var cpassword=$("#cpassword").val();
+         var str=/^[0-9]+$/;
+         var stp=/^[A-Za-z]+$/;
+          var pass=/^[!-@]+$/;
+        $(".error").remove();
+        if(fname.length<1){
+          $("#firstName").after("<span class='error'>Enter First Name</span>");
+          $("#firstName").focus();
+          return false;
+        }
+         if(fname.length<4){
+          $("#firstName").after("<span class='error'>Enter must be 5 latters..?</span>");
+            $("#firstName").focus();
+            return false;
+        }
+       if(fname.match(stp)){
+        true;
+       }else{
+        $("#firstName").after("<span class='error'>Invailde firstName..? </span>" );
+          $("#firstName").focus();
+            return false;
+       }
+        if(lname.length<1){
+          $("#lastName").after("<span class='error'>Enter Last Name</span>");
+          $("#lastName").focus();
+          return false;
+        }
+         if(lname.length<4){
+          $("#lastName").after("<span class='error'>Enter must be 5 latters..?</span>");
+            $("#lastName").focus();
+            return false;
+        }
+        if(lname.match(stp)){
+        true;
+       }else{
+        $("#lastName").after("<span class='error'>Invailde lastName..? </span>" );
+          $("#lastName").focus();
+            return false;
+       }
+        if(mnumber.length <1){
+          $("#mobile").after("<span class='error'>Enter Mobile</span>");
+          $("#mobile").focus();
+          return false;
+       
+        }
+        if(mnumber.match(str)){
+       true;
+        }else{
+          $("#mobile").after("<span class='error'>Invailde Number..? </span>" );
+          $("#mobile").focus();
+          return false
+        }
+         if( mnumber.length<9 || mnumber.length>11){
+            $("#mobile").after("<span class='error'>Incorrect Number..?</span>");
+            $("#mobile").focus();
+            return false;
+        }
+        if(email.length<1){
+          $("#email").after("<span class='error'>Enter Email</span>");
+          $("#email").focus();
+          return false;
+        }
+        if(email.length<14){
+          $("#email").after("<span class='error'>Email maximum 15..latter..?</span>");
+          $("#email").focus();
+          return false;
+        }
+        
+        if(password.length<1){
+          $("#password").after("<span class='error'>Enter Password..?</span>");
+            $("#password").focus();
+            return false;
+        }
+        if(password.match(pass)){
+          true;
+        }else{
+          $("#password").after("<span class='error'>Enter must be Symbole @-# ..?</span>");
+            $("#password").focus();
+            return false;
+        }
+        if( password.length<4 || password.length>9){
+            $("#password").after("<span class='error'>Password maximum 8..?</span>");
+            $("#password").focus();     
+            return false;
+        }
+        if(cpassword.length<1){
+          $("#cpassword").after("<span class-'error'<Enter Confirm-Password..?</span>");
+            $("#cpassword").focus();
+            return false;
+        }
+        if(cpassword.match(password)){
+          true
+        }else{
+          $("#cpassword").after("<span class='error'>Doesn't match password..?");
+            $("#cpassword").focus();
+            return false;
+        }
+
+      });
+    })
+    
+   
+  </script>
+  <style>
+    span{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  
+       <div class="container ">
+        <div class="col-lg-6 m-atuo">
+          <div class="card p-5 bg-info">
+            <form action="" class="bg-info" >
+              <div class="form-group">
+                <label class="form-label text-white">First Name</label>
+                <input type="text"  class="form-control" id="firstName">
+              </div>
+              <div class="form-group">
+                <label for="form-label" class="text-white">Last Name</label>
+                <input type="text" name="" id="lastName" class="form-control">
+              </div>
+              <div class="from-group">
+                <label class="form-label text-white">Mobile No</label>
+                <input type="text" class="form-control" id="mobile">
+              </div>
+              <div class="form-group">
+                <label class="form-label text-white ">E-mail</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label text-white">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div class="form-group">
+                <label class="form-label text-white">Confirm-Password</label>
+                <input type="password" class="form-control" id="cpassword">
+              </div>
+              <div class="form-group">
+                <input type="checkbox">
+                <label class="text-white" >Agree the terms and conditions</label>
+              </div>
+              <div class="form-group">
+                <label></label>
+                <input type="submit" value="Submit" onclick="return valiForm()"  class="form-control btn btn-success tex-" id="submit">
+              </div>
+            </form>
+          </div>
+        </div>
+       </div>
+   <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+</html>

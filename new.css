@@ -1,0 +1,64 @@
+/* #h{
+  background:#218ce3;
+  background-image: linear-gradient(135.9eg,  rgba(109,25,252,1) 16.4%, rgba(125,31,101,56.1%) );
+  min-height: 100%;
+  overflow-x: hidden;
+
+}
+#vertical-nav{
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1);
+  transition: all 0.4s;
+} */
+body{
+  background: #ddd;
+}
+profile-area{
+  padding: 88px 0;
+}
+.card{
+  box-shadow: 0 0 30px  rgb(194, 19, 229);
+  box-sizing:rgb(194, 19, 229);
+  
+  overflow: hidden;
+  border-radius: 20px;
+  
+}
+.img1 img{
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  
+}
+.img2 img{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 7px solid;
+}
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: all 1.5s ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
+.inner text{
+  transition: all 1.5s ease;
+}
+.inner:hover text{
+  transform: scale(1.5);
+}
