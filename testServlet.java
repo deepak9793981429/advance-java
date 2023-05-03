@@ -1,4 +1,4 @@
-package com.server.web.jdbc;
+package com.demo.web.jdbc;
 
 import java.io.IOException;
 import java.io.PrintWriter;
