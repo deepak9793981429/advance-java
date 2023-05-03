@@ -1,0 +1,188 @@
+<html>
+  <head>
+    <title>jquery-validation-form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      /* .addClass{
+        color: red;
+        font-style: italic;
+        font-size: 39px;
+      } */
+      .removeClass{
+        color: red;
+        font-style: italic;
+       
+      }
+    </style>
+   <script>
+     $(document).ready(function(){
+      $("div").html("<h1>deepak paswan</h1>");
+      $("div").text("<h1>deepak paswan</h1>");
+      $("#div").click(function(){
+        $("#div").css("background-color","red");
+      });
+         $("#click").click(function(){
+          $("p:first-child").css("color","red");
+         });
+        $("#click").click(function(){
+          $("p:last-child").css("color","red");
+        });
+        $("#click").click(function(){
+          $("p:nth-child(2)").css("color","red");
+        });
+
+        // select div
+        $("#click").click(function(){
+          $("div").eq(2).css("background-color","red");
+        });
+        $("#click").click(function(){
+          $("div:first").css("background-color","black");
+        });
+        $("#click").click(function(){
+          $("div").eq(1).css("background-color","green");
+        });
+
+        // select css to pargraph
+        $("#click").click(function(){
+          $("p").addClass("addClass");
+        });
+        // removeClass 
+        $("#btn").click(function(){
+          $("p").removeClass("removeClass");
+        });
+
+        // toggle Class
+        $("#btn").click(function(){
+          $("p").toggleClass("removeClass");
+        });
+
+        // alert message
+        $("#btn").click(function(){
+          alert("No of li ="+$("li").length);
+        });
+        
+        // hidden to show 
+        $("#btn").click(function(){
+          $("div").hide();
+        });
+
+        $("#btn1").click(function(){
+          $("div").show();
+        });
+        // slideToggle
+        $("#btn").click(function(){
+          $("div").slideToggle();
+        });
+        // slideUp
+        $("#btn").click(function(){
+          $("div").slideUp(2000);
+        });
+        // slideDown
+        $("#btn1").click(function(){
+          $("div").slideDown();
+        });
+        //  slideToggle
+         $("#btn").click(function(){
+          $("div").slideToggle();
+        });
+        // insertBefore and insertAfter
+        $("#btn1").click(function(){
+          $("<p> Insert Before ?</p>").insertBefore($("#div1"));
+        })
+        $("#btn2").click(function(){
+          $("<p> Insert Before ?</p>").insertAfter($("#div1"));
+        })
+        // checked method
+           $("#btn").click(function(){
+               if($("#checkmale").is(":checked")){
+                alert("This is a Male");
+               }else if($("#checkfemale").is(":checked")){
+                alert("This is a Female");
+               }
+           })
+
+          // Attribute explain
+          $("#btn").click(function(){
+              alert($("div[title]").html());
+          });
+
+        // 
+    })
+   </script>
+  </head>
+  <body>
+       <div id="div" style="width: 400px; height: 40px;background-color: brown;"></div>
+       <div>  
+       <p>I Love Study -1</p>
+       <p>I love Java -2</p>
+       <p>I love Coding -3</p>
+       </div>
+
+       <!-- exmaple eq -->
+       <div style="width: 140px; height:120px; background-color: brown;" ></div>
+       <br>
+       <div style="width: 140px; height:120px; background-color: palevioletred;" ></div>
+       <br>
+       <div style="width: 140px; height:120px; background-color: green;" ></div>
+       <br>
+
+       <!-- select addClass  method-->
+       <p>I love Indai</p>
+       <input type="submit" value="click here" id="click">
+
+       <!-- select removeClass -->
+       <p class="removeClass">I love Indai</p>
+       <input type="submit" value="removeClass" id="btn">
+
+       <!--  toggleClass -->
+       <p class="removeClass">I love Indai</p>
+       <input type="submit" value="toggleClass" id="btn">
+
+       <!-- length to li -->
+       <ul >
+        <li>hello -1</li>
+        <li>hello -2</li>
+        <li>hello -3</li>
+       </ul>
+       <input type="submit" id="btn" value="check lenght">
+
+       <!-- hidden to show -->
+       <input type="submit" value="hidden/div" id="btn">
+       <input type="submit" value="show/div" id="btn1">
+       <br>
+       <div style="background-color: black; color:white; "> hello deepak</div>
+
+       <!-- slide up  and slideDown-->
+       <input type="submit" value="slide up" id="btn">
+       <input type="submit" value="slide Down" id="btn1">
+       <br>
+       <div style="width: 63px; height: 60px; background-color:red ; margin-left: 35px;"></div>
+       <!-- slideToggle -->
+       <input type="submit" value="slide Down" id="btn">
+       <br>
+       <div style="width: 63px; height: 60px; background-color:red ; "></div>
+
+       <!-- insertAfter to insertBefore -->
+       <input type="submit" id="btn1" value="insertBefore">
+       <input type="submit" id="btn2" value="insertAfter">
+       <br>
+       <div id="div1" style="width: 150px; height:50px; background-color:pink;margin:10px"></div>
+
+       <!-- check method -->
+       <input type="radio" name="hk" id="checkmale">Male
+       <input type="radio" name="hk" id="checkfemale">Female
+       <br>
+       <input type="submit" id="btn" value="check">
+
+       <!-- Attribute -->
+       <input type="submit" name="click" id="btn">
+       <br>
+       <div title="this is  title" style="float: left; width: 100%">
+        Hello World I am first div
+      </div>
+      <br>
+       <div title="this is a title" style="float: left; width: 100%">
+        Hello World I am second div
+      </div>
+      </body>
+</html>
