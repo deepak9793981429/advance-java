@@ -12,52 +12,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <title>Student-Tracker-Update</title>
     <script type="text/javascript">
-            $(document).ready(function(){
-            	$("#submit").click(function(){
-            	
-            		var first_name = $("#first_name").val();
-            		var last_name = $("#last_name").val();
-            		var email = $("#email").val();
-            		$(".error").remove();
-            		
-            		if(first_name.length < 1){
-            			$("#first_name").after('<span class="error">**Please Enter First Name**</span>');
-            			$("#first_name").focus();
-            		  return false
-            		}
-            		
-            		if(!isNaN(first_name)){
-            			$("#first_name").after('<span class="error">Invalid First Name..?</span>');
-            			$("#first_name").focus();
-            			return false;
-            		
-            		}
-            		if(last_name.length < 1){
-            			$("#last_name").after('<span class="error">**Please Enter Last Name**</span>');
-            			$("#last_name").focus();
-            			return false;
-            		}
-            		if(!isNaN(last_name)){
-            			$("#last_name").after('<span class="error">Invalid First Name..?</span>');
-            			$("#last_name").focus();
-            			return false;
-            		}
-            		if(email.length < 1){
-            			$("#email").after('<span class="error">Please Enter email</span>');
-            			$("#email").focus();
-            			return false
-            	
-            		}else{
-            		
-            		    regEx = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-            		    var validEmail = regEx.test(email);
-            		    if(!validEmail){
-            		    	$("#email").after('<span class="error">Enter a valid email..?</sapan>');
-            		    	return false;
-            		    }
-            		  } 
-            	});	
-            }) 
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#submit").click(function(){
+    	
+    		var first_name = $("#first_name").val();
+    		var last_name = $("#last_name").val();
+    		var email = $("#email").val();
+    		var str =/^[A-Za-z]+$/;
+    		
+    		$(".error").remove();
+    		
+    		if(first_name.length <1)  {
+      	    	 $("#first_name").after('<span class="error">***Please Enter First Name***</span>');
+      	    	 $("#first_name").focus();
+      	    	 return false;
+      	     }
+    		if(first_name.length <3 || first_name.length > 20){
+     	    	 $("#first_name").after('<span class="error">***length of your first name must be between 3 and 20</span>');
+     	    	 $("#first_name").focus();
+     	    	 return false;
+     	     }
+    		if(first_name.match(str))
+    			true;
+    		else{
+    			 $("#first_name").after('<span class="error">**Invalid Your First Name**</span>');
+     	    	 $("#first_name").focus();
+     	    	 return false;
+    		}
+      	     
+       	     if(last_name.length ==""){
+      	    	 $("#last_name").after('<span class="error">***Please Enter Last Name***</span>');
+      	    	 $("#last_name").focus();
+      	    	 return false;
+      	     }
+       	  if(last_name.length <3 || last_name.length > 20){
+   	    	 $("#last_name").after('<span class="error">**length of your last name must be between 3 and 20**</span>');
+   	    	 $("#last_name").focus();
+   	    	 return false;
+   	     }
+      	     
+      	     if(last_name.match(str))
+      	    	true;
+      	     else{             	    	  
+           	  $("#last_name").after('<span class="error">**Invalid Your Last Name**</span>');
+           	  $("#last_name").focus();                  	 
+      	    	 return false;                  	     
+      	     }    
+      	   if(email.length ==""){
+     			$("#email").after('<span class="error">Please Enter email</span>');
+     			$("#email").focus();
+     			return false   	
+  		}else{          		
+  		    regEx = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+  		    var validEmail = regEx.test(email);
+  		    if(!validEmail){
+  		    	$("#email").after('<span class="error">Invalid email..?</sapan>');
+  		    	$("#email").focus();
+  		    	return false;
+  		    }
+  		  } 
+      	 if(email.length < 15 || email.length >20){
+   			$("#email").after('<span class="error">**length of your email must be between 3 and 20**</span>');
+   			$("#email").focus();
+   			return false           	
+   		}
+    	});	
+    }) 
       </script>
                   
  <style type="text/css">
@@ -98,10 +119,10 @@ button{
 <body class="h">
      <div class="container-fuild">
      <div class="row ">
-     <div class="col-md-8 bg-secondary">
+     <div class="col-md-10 bg-secondary">
        <h1 class="text-warning display-4 text-center">Miconsol University</h1>
      <h3 class="text-white text-center">Add Student</h3>
-     <form  action="StudentControllerServlet1" method="get"   >
+     <form  action="StudentControllerServlet2" method="get"   >
       <input type="hidden" name="command" value="ADD"/>
       <table class=" px-2 inner">
       <tr>
@@ -121,13 +142,12 @@ button{
       
       <tr>
       <td><label></label></td>
-       <td><button type="submit" id="submit"    class="btn btn-success btn-lg text-light">Save</button></td>
-      </tr>
-      
+       <td><button type="submit" id="submit"   class="btn btn-success btn-lg text-light">Save</button></td>
+      </tr>     
       </table>
      </form>
      <div class="align-conten-center">
-     <a href="StudentControllerServlet1" class="btn  btn-outline-warning mb-5 ml-auto "><i class="fas fa-arrow-left text-danger" aria-hidden="true"></i><span>Back to List</span></a>
+     <a href="StudentControllerServlet2" class="btn  btn-outline-warning mb-5 ml-auto "><i class="fas fa-arrow-left text-danger" aria-hidden="true"></i><span>Back to List</span></a>
      </div>
      </div>
      </div>

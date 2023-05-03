@@ -12,40 +12,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <title>Student-Tracker-Update</title>
     <script type="text/javascript">
-            $(document).ready(function(){
-            	$("#submit").click(function(){
-            	
-            		var username = $("#username").val();
-            		var password = $("#password").val();
-            		
-            		
-            		$(".error").remove();
-            		
-            		if(username.length < 1){
-            			$("#username").after('<span class="error">**Please enter username**</span>');
-            			$("#username").focus();
-            		  return false
-            		}
-            		if(!isNaN(username)){
-            			$("#username").after('<span class="error">Invalid Username ..?</span>');
-            			$("#username").focus();
-            			return false;
-            		
-            		}
-            		if(password.length < 1){
-            			$("#password").after('<span class="error">**Please enter password**</span>');
-            			$("#password").focus();
-            			return false;
-            		}
-            		if(password.length < 8){
-            			$("#password").after('<span class="error">Enter long character 8..?</span>');
-            			$("#password").focus();
-            			return false;
-            		}
-            		
-            		
-            	});	
-            }) 
+    $(document).ready(function(){
+    	$("#submit").click(function(){
+    	  var username = $("#username").val();
+    	  var password = $("#password").val();
+    	  var charatered =/^[A-Za-z]+$/;
+    	   
+    	     $(".error").remove();
+    	     
+    	     if(username.length<1){
+    	    	 $("#username").after('<span class="error">**Please Fill Username**</span>')
+    	    	 $("#username").focus();
+    	    	 return false;
+    	     } 	 
+    	     if(username.length<4){
+    	    	 $("#username").after('<span class="error">**Username must be 4charater**</span>');
+    	    	 $("#username").focus();
+    	    	 return false;
+    	     }
+    	     if(username.length>20){
+    	    	 $("#username").after('<span class="error">**Username must be less than 20**</span>');
+    	    	 $("#username").focus();
+    	    	 return false; 
+    	     }
+    	     if(password.length < 1){
+    	    	 $("#password").after('<span class="error">***Please Enter Password***</span>');
+    	    	 $("#password").focus();
+    	    	 return false;
+    	     }
+    	     if(password.length <4){
+    	    	 $("#password").after('<span class="error"> Password must be four value...</span>');
+    	    	 $("#password").focus();
+    	    	 return false;
+    	     }
+    	     if(password.length >8){
+    	    	 $("#password").after('<span class="error">**Password must be less than 8**</span> ');
+    	    	 $("#password").focus();
+    	    	 return false;
+    	     }
+    	 
+    	});
+    })
       </script>
                   
  <style type="text/css">
@@ -89,26 +96,25 @@ button{
      <div class="col-md-8 bg-secondary">
        <h1 class="text-warning display-4 text-center">Miconsol University</h1>
      <h3 class="text-white text-center">Please try again</h3>
-     <form  action="SessionServlet" method="post"   >
-     
-      <table class=" px-2 inner">
-      <tr>
-      <td><label >Username</label></td>
-      <td><input  type="text" id="username"  name="username"/></td>
-      </tr>
-      
-      <tr>
-      <td><label>Password :</label></td>
-      <td><input  type="text" id="password"  name="pass"/></td>
-      </tr>
-     
-      <tr>
-      <td><label></label></td>
-       <td><button type="submit" id="submit"    class="btn btn-success btn-lg text-light">Save</button></td>
-      </tr>
-      
-      </table>
-     </form>
+    <form action="Session" method="post">
+                      
+                    
+                     <table class="table-white" >
+                     <tr>
+                     <td><label for="username" id="label1">Username</label></td>
+                      <td><input type="text" id="username" placeholder="Enter username" name="uname"></td> 
+                   
+                     </tr>
+                     <tr>
+                     <td><label for="password" id="label2">Password</label></td>
+                     <td><input type="password" id="password" placeholder="Enter password" name="pass"></td>
+                     </tr>
+                     <tr>
+                     <td><label></label></td>
+                      <td><button type="submit" id="submit"  class="btn btn-primary btn-lg my-3" onClick="return validateForm()" >Log In</button></td>
+                     </tr>
+                     </table>
+                     </form>
     
      </div>
      </div>
